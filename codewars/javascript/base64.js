@@ -1,3 +1,14 @@
+/*Extend the String object to create a function that converts the value of the String to and from Base64 using the ASCII character set.
+
+'this is a string!!'.toBase64();
+should return 'dGhpcyBpcyBhIHN0cmluZyEh'
+
+'dGhpcyBpcyBhIHN0cmluZyEh'.fromBase64();
+should return 'this is a string!!'
+
+see http://en.wikipedia.org/wiki/Base64
+*/
+
 String.prototype.toBase64 = function () {
   var stringyBits = this.match(/.{1,3}/g);
   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
